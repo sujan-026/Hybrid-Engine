@@ -4,3 +4,14 @@
 .env.development.local
 .env.test.local
 .env.production.local
+
+.DS_Store
+.vscode
+.idea
+.cursor
+.cursorrules
+.cursorignore
+.cursorignorerules
+.cursorignorerules
+
+.node_modules
