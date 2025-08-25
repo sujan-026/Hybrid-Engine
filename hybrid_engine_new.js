@@ -225,6 +225,11 @@ app.post('/markets', (req, res) => {
   res.json({ marketId, outcomes });
 });
 
+// put this near the bottom, BEFORE app.listen(...)
+app.get('/health', (_req, res) => {
+  res.status(200).json({ ok: true, mode: MARKETS.size ? 'ready' : 'boot', ts: Date.now() });
+});
+
 // List all markets
 app.get('/markets', (req, res) => {
   const all = Array.from(MARKETS.entries()).map(([id, meta]) => ({
