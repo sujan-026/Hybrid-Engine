@@ -225,6 +225,12 @@ app.post('/markets', (req, res) => {
   res.json({ marketId, outcomes });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hello from Pricing Model!"
+  })
+})
+
 // put this near the bottom, BEFORE app.listen(...)
 app.get('/health', (_req, res) => {
   res.status(200).json({ ok: true, mode: MARKETS.size ? 'ready' : 'boot', ts: Date.now() });

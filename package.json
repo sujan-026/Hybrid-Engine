@@ -1,4 +1,11 @@
 {
+  "name": "hybrid-engine",
+  "version": "1.0.0",
+  "main": "hybrid_engine_new.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node hybrid_engine_new.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "decimal.js": "^10.6.0",
